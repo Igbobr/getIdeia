@@ -23,7 +23,6 @@ if (array_key_exists('id', $_GET)) {
 			<br>
 			<br>
 			<h5>Autor: <?=$criador['nome']?></h5>
-			<h5>Classificação *****</h5>
 			<h5>Categoria: <?=$projeto['categoria']?></h5>
 			<div class="direitaShow">
 				<a href="<?=$projeto['previa']?>" class="linkprevia">Ver Prévia</a>

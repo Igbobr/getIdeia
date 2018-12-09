@@ -10,11 +10,11 @@ include 'paginas/cabecalhoDeLogin.php';
 							
 							<div class="form-group">
 								<label for="nome">Nome</label>
-								<input class="form-control" type="email" id="nome" name="nome" value="">
+								<input class="form-control" type="text" id="nome" name="nome" value="<?=$consulta['nome']?>">
 							</div>
 							<div class="form-group">
 								<label for="nome">Email</label>
-								<input class="form-control" type="text" id="email" name="email"  value="">
+								<input class="form-control" type="text" id="email" name="email"  value="<?=$consulta['email']?>">
 							</div>
 							<div class="form-group">
 								<label for="senha">Senha</label>

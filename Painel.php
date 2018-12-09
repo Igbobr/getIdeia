@@ -20,7 +20,7 @@ include 'paginas/cabecalhoDeLogin.php';
 			while ($projeto = mysqli_fetch_assoc($projetos)):	
 	    	?>
 		    	<div class="row cardProject">
-		    		<h4 class="col-md-3 ">Projeto: <?=substr($projeto['sobre'], 0,15)."...";?></h4>
+		    		<h4 class="col-md-3 ">Projeto: <?=substr($projeto['descricao'], 0,15)."...";?></h4>
 		    		<h5 class="col-md-5 col-md-offset-1">Sobre: <?=substr($projeto['sobre'], 0,40)."...";?>
 		    		</h5>
 		    		<h4 class="col-md-2 col-md-offset-1">Preço: R$ <?=$projeto['preco'];?></h4>

@@ -20,28 +20,36 @@ include 'errors.php';
     //Valindando senhas
    if (($senha=="")||($senha==' ')) {
        header("Location: ../cadastrar.php?error={$error[0]}");
+       die();
    }elseif ($senha != $confirmSenha) {
         header("Location: ../cadastrar.php?error={$error[8]}");
+        die();
     }elseif (mb_strlen($senha)<5) {
       header("Location: ../cadastrar.php?error={$error[6]}");
+      die();
     }
     //Validando Nome
     if (($nome=="")||($nome==' ')) {
-       header("Location: ../cadastrar.php?error={$error[0]}"); 
+       header("Location: ../cadastrar.php?error={$error[0]}");
+       die();
     }elseif(mb_strlen($nome)<=2){
         echo "Preencha o nome com no mínimo 2 caracteres.";
         header("Location: ../cadastrar.php?error={$error[4]}");
+        die();
     }
     //Validando Email
     if ( !isset( $email )|| !(filter_var( $email, FILTER_VALIDATE_EMAIL ))) {
       echo $email;
       header("Location: ../cadastrar.php?error={$error[3]}");
+      die();
     }
     //Validando termos de compromisso
     if (array_key_exists('termo', $_POST)) {
         $termo = $_POST['termo'];
+        die();
     }else{
          header("Location: ../cadastrar.php?error={$error[9]}");
+         die();
     }
     create_usuario($email,$senha,$nome,$avaPessoal,$foto);
 

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="paginas/design/css/menu.css">
 	<link rel="stylesheet" href="paginas/design/css/divisao.css">
 	<link rel="stylesheet" href="paginas/design/css/form.css">
+	<link rel="stylesheet" href="paginas/design/css/customSelect.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
   </head>
@@ -28,10 +29,13 @@
   		if ($tipo_pesquisa == "programacao") {
   			$optins =  "<option value='todos'>Todos</option>
 				        <option value='programacao' selected='selected'>Programação</option>
-				        <option value='design' >Desing</option>";
+				        <option value='design' >Desing</option>
+				        <option value='todos'>Todos</option>
+				        ";
   		}elseif ($tipo_pesquisa =="design") {
   			
   			$optins =  "<option value='todos'>Todos</option>
+  						<option value='todos'>Todos</option>
 				        <option value='programacao' >Programação</option>
 				        <option value='design' selected='selected'>Desing</option>";
   		}else{
@@ -79,9 +83,11 @@
 			<div class="grupo" >
 			<form method="GET" action="pesquisa.php">
 				  <input class="form" type="text" id="pesquisa" placeholder="Buscar..." name="pesquisa" value="<?=$pesquisa?>" />
+				  <div class="custom-select" style="width:200px;">
 				  <select name="tipo_pesquisa">
 					 <?php echo $optins; ?>
 				  </select>
+				  </div>
 				  <button type="submit" name="submit" class="botao">Procurar</button>
 			 </form>
 			</div>
@@ -147,6 +153,7 @@
 			  typeWriter(titulo);
 
 	</script>
+	<script type="text/javascript" src="paginas/design/js/customSelect.js"></script>
 <?php include("paginas/rodape.php"); ?>
 
 		

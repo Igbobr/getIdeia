@@ -9,6 +9,12 @@
 	<div class="container">
 		<div class="row"> 
 			<div style="background-color: #ccc;box-shadow: 8px 8px 8px gray; padding: 30px;">
+				<?php
+        		//******VERIFICANDO SE TEM ALGUMA MENSAGEM DE ERRO********
+        		if (array_key_exists('error', $_GET)) {
+        			echo "<p style='color:white;text-align:center;background:#550000;'>".$_GET['error']."</p>";
+        		}
+    	  	?>
 				<form method="post" action="paginas/adicionarProjeto.php">
 					<input type="hidden" NAME="id_usuarios" value="<?=$consulta['id']?>"/>
 					<div class="form-group">

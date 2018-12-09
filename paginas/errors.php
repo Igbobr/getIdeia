@@ -10,7 +10,10 @@
     "Mínimo de 5 caracteres na sua senha",
     "Somente letras e números são permitidos.",
     "Senhas precisam ser idênticas.",
-    "Assine o termo"
+    "Assine o termo",
+    "Valor de Preço inválido, tente outro.",
+    "Mínimo de 5 caracteres na sua descrição",
+    "PRÉVIA DE PROJETO INVÁLIDA"
 );
 
  ?>

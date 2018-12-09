@@ -9,7 +9,7 @@ function isLogado(){
 {
     if (!isLogado()) {
         $_SESSION['danger'] = "Você não tem permissão para utilizar essa função.";
-        header("location:../login.php");
+        header("location:login.php");
         die();
     }
 }
