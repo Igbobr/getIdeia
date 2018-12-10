@@ -28,6 +28,9 @@ if (array_key_exists('id', $_GET)) {
 				<a href="<?=$projeto['previa']?>" class="linkprevia">Ver Prévia</a>
 				<br>
 				<br>
+				<a href="<?=$projeto['linkComprar']?>" class="linkprevia">Comprar</a>
+				<br>
+				<br>
 				<h5>Preço: R$ <?=$projeto['preco']?></h5>
 			</div>
 		</div>

@@ -1,6 +1,7 @@
 <?php 
 include'CRUD_Usuario.php';
 include 'errors.php';
+    //Recebendo dados de cadastrar
     //Verificando se os campos existem 
     if (array_key_exists('nome', $_POST)) {
         $nome = $_POST['nome'];
@@ -46,13 +47,11 @@ include 'errors.php';
     //Validando termos de compromisso
     if (array_key_exists('termo', $_POST)) {
         $termo = $_POST['termo'];
-        die();
     }else{
          header("Location: ../cadastrar.php?error={$error[9]}");
          die();
     }
-    create_usuario($email,$senha,$nome,$avaPessoal,$foto);
+   create_usuario($email,$senha,$nome,$avaPessoal,$foto);
+   echo "<h2 style='color: green;text-align: center;''>Cadastrado. Agora faça login quando puder</h2>";
+   die();
 
-?>
-
-<h2 style="color: green;text-align: center;">Cadastrado. Agora faça login quando puder</h2>

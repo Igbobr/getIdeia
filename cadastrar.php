@@ -25,12 +25,12 @@
 						</div>
 						<div class="campo">
 							<label for="senha">Senha</label>
-							<input class="form" type="text" id="senha" name="senha"  value="">
+							<input class="form" type="password" id="senha" name="senha"  value="">
 						</div>
 
 						<div class="campo">
 							<label for="confirmeSenha">Senha confirmar</label>
-							<input class="form" type="text" id="confirmeSenha" name="confirmeSenha" value="">
+							<input class="form" type="password" id="confirmeSenha" name="confirmeSenha" value="">
 						</div>
 						
 						<label>Termo: </label>

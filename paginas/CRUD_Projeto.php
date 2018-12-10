@@ -1,6 +1,6 @@
 <?php
 
- function create_projeto($id_usuario,$img,$classificacao,$descricao,$sobre,$preco,$categoria,$previa){
+ function create_projeto($id_usuario,$img,$classificacao,$descricao,$sobre,$preco,$categoria,$previa,$linkComprar){
 	//Tratando valores de variáveis para não ter caracter que corrompa o BD
 	$conexao = mysqli_connect("localhost","root","","getIdeia");
 	$img = mysqli_real_escape_string($conexao,$img);
@@ -9,7 +9,8 @@
 	$preco = mysqli_real_escape_string($conexao,$preco);
 	$categoria = mysqli_real_escape_string($conexao,$categoria);
 	$previa = mysqli_real_escape_string($conexao,$previa);
-	$sql = "insert into projetos(id_usuarios,img,classificacao,descricao,sobre,preco,categoria,previa) values ('{$id_usuario}','{$img}','{$classificacao}','{$descricao}','{$sobre}','{$preco}','{$categoria}','{$previa}');";
+	$linkComprar = mysqli_real_escape_string($conexao,$linkComprar);
+	$sql = "insert into projetos(id_usuarios,img,classificacao,descricao,sobre,preco,categoria,previa,linkComprar) values ('{$id_usuario}','{$img}','{$classificacao}','{$descricao}','{$sobre}','{$preco}','{$categoria}','{$previa}','{$linkComprar}');";
 	$resultadoDaInsercao = mysqli_query($conexao, $sql);
     return $resultadoDaInsercao;
 }

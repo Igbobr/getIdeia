@@ -18,14 +18,14 @@ include 'paginas/cabecalhoDeLogin.php';
 							</div>
 							<div class="form-group">
 								<label for="senha">Senha</label>
-								<input class="form-control" type="password" id="senha" name="senha"  value="">
+								<input class="form-control" type="password" id="senha" name="senha"  value="<?=$consulta['senha']?>">
 							</div>
 
 							<div class="form-group">
 								<label for="confirmeSenha">Senha confirmar</label>
-								<input class="form-control" type="password" id="confirmeSenha" name="confirmeSenha"" value="">
+								<input class="form-control" type="password" id="confirmeSenha" name="confirmeSenha"" value="<?=$consulta['senha']?>">
 							</div>
-						<button type="submit" class="btn btn-default">Editar</button>	
+						<button type="submit" class="btn btn-default" disabled >Editar(Não disponível nesta versão)</button>	
 			</form>
  		</div>
  	</div>

@@ -12,6 +12,7 @@
 	$sql = "insert into usuarios(email,senha,nome,foto)
 	 values('{$email}','{$senha}','{$nome}','{$foto}')";
 	$resultadoDaInsercao = mysqli_query($conexao, $sql);
+	echo $resultadoDaInsercao;
     return $resultadoDaInsercao;
 }
  function read_usuario_id($id){

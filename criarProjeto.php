@@ -35,6 +35,9 @@
 						<input type="text" name="previa" placeholder="Link De acesso da Previa" class="form-control"/>
 					</div>
 					<div class="form-group">
+						<input type="text" name="linkComprar" placeholder="Link De acesso da Compra" class="form-control"/>
+					</div>
+					<div class="form-group">
 					  <label for="comment">Breve descrição sobre o Projeto</label>
 					  <textarea class="form-control" rows="5" id="comment" name="sobre"></textarea>
 					</div>

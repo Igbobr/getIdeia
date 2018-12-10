@@ -1,6 +1,7 @@
  <?php 
 include 'CRUD_Projeto.php';
 include 'errors.php';
+//Recebendo dados de CriarProjeto.php
 $id_usuario = $_POST['id_usuarios'];
 $img = '';
 $descricao = $_POST['descricao'];
@@ -8,6 +9,7 @@ $preco = $_POST['preco'];
 $sobre = $_POST ['sobre'];
 $categoria = $_POST['categoria'];
 $previa = $_POST['previa'];
+$linkComprar = $_POST['linkComprar'];
 $classificacao = 0;
 ;
  	//Valindando Descrição
@@ -37,8 +39,12 @@ $classificacao = 0;
       die();
     }
 
+    //Validando link de compra 
+    if ( !isset( $linkComprar )|| !(filter_var( $linkComprar, FILTER_VALIDATE_URL ))) {
+      header("Location: ../cadastrar.php?error={$error[13]}");
+      die();
+    }
 
-create_projeto($id_usuario,$img,$classificacao,$descricao,$sobre,$preco,$categoria,$previa);
- header("location:../painel.php");
-?>
-<p class="alert-success"> Produto adicionado com sucesso. </p>
+create_projeto($id_usuario,$img,$classificacao,$descricao,$sobre,$preco,$categoria,$previa,$linkComprar);
+header("location:../painel.php");
+die();

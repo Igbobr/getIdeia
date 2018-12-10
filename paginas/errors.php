@@ -13,7 +13,8 @@
     "Assine o termo",
     "Valor de Preço inválido, tente outro.",
     "Mínimo de 5 caracteres na sua descrição",
-    "PRÉVIA DE PROJETO INVÁLIDA"
+    "PRÉVIA DE PROJETO INVÁLIDA",
+    "Link para compra inválido"
 );
 
  ?>
